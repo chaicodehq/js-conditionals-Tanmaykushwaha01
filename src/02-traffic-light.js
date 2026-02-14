@@ -21,6 +21,22 @@
  * @param {string} color - The traffic light signal
  * @returns {string} The driving action to take
  */
+
 export function getTrafficAction(color) {
-  // Your code here
+  switch (color.toLowerCase()) {
+    case "green":
+      return "GO";
+
+    case "yellow":
+      return "SLOW DOWN";
+
+    case "red":
+      return "STOP";
+
+    case "flashing red":
+      return "STOP AND PROCEED WITH CAUTION";
+
+    default:
+      return "INVALID SIGNAL";
+  }
 }
